@@ -11,9 +11,9 @@ JENKINS_URL = "http://192.168.0.11:8080/github-webhook/"
 @app.route('/', methods=['POST'])
 def webhook():
     # Verify GitHub signature
-    signature = request.headers.get('X-Hub-Signature-256')
-    if not signature:
-        return Response("No signature", status=403)
+    # signature = request.headers.get('X-Hub-Signature-256')
+    # if not signature:
+    #    return Response("No signature", status=403)
 
     # Compute hash
     # hash_object = hmac.new(GITHUB_SECRET.encode('utf-8'), msg=request.data, digestmod=hashlib.sha256)
