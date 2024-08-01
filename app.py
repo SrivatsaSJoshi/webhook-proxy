@@ -26,7 +26,7 @@ def webhook():
     jenkins_response = requests.post(JENKINS_URL, data=request.data, headers=request.headers)
     
     return Response(jenkins_response.content, status=jenkins_response.status_code, 
-                    headers=dict(jenkins_response.headers))
+                    headers=jenkins_response.headers)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
