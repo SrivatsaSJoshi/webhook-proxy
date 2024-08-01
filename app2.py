@@ -4,7 +4,7 @@ import requests
 app = Flask(__name__)
 
 # Replace this with the URL you want to forward requests to
-TARGET_URL = "https://example.com/api"
+TARGET_URL = "http://192.168.0.11:8080/github-webhook/"
 
 @app.route('/', methods=['POST'])
 def proxy():
